@@ -86,7 +86,7 @@ AgeGroup = SWITCH(
 )
 ```
 
-## 📊 Power BI Dashboard Features
+##Power BI Dashboard Features
 
 ### KPIs
 | Metric                        | Value        |
@@ -97,7 +97,7 @@ AgeGroup = SWITCH(
 | **Activation Rate**          | `55%`        |
 | **Delinquency Rate**         | `5%`         |
 
-## 📈 Key Insights
+## Key Insights
 - **Gender**:  
   - Males contribute `$31M` revenue, Females `$26M`.
 - **Card Type**:  
@@ -118,8 +118,7 @@ AgeGroup = SWITCH(
 
 
 ##  Contact
-Created by **[Your Name]**  
-[Email](d.adhiakri2049@gamil.com)  
+Created by **[Dilip Adhiari]**   
 [LinkedIn](https://www.linkedin.com/in/dilip-adhikari/)  
 
 
