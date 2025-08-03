@@ -6,7 +6,7 @@ This project develops an interactive credit card dashboard using SQL and Power B
 ##  Objective
 To build a comprehensive dashboard that:
 - Integrates customer demographics with credit card behavior.
-- Tracks key KPIs such as revenue, interest earned, activation and delinquency rates.
+- Tracks key KPIs such as revenue, interest earned, activation, and delinquency rates.
 - Supports data-driven business decisions through visual insights.
 
 ##  Dataset Overview
@@ -60,7 +60,7 @@ CREATE TABLE cc_detail (
 ```
 
 ##  Data Pipeline & Integration
-- Data is stored in **PostgreSQL Server**.
+- Data is stored in **SQL Server**.
 - Imported via `.CSV` files.
 - Joined on `Client_Num` to link customer and transaction details.
 - Connected to **Power BI**  for analysis and visualization.
@@ -68,7 +68,7 @@ CREATE TABLE cc_detail (
 
 ### DAX Measures
 **Total Revenue**:
-```DAX
+``` DAX
 Total Revenue = 
 SUM('cc_detail'[Total_Trans_Amt]) + 
 SUM('cc_detail'[Annual_Fees]) + 
@@ -76,7 +76,7 @@ SUM('cc_detail'[Interest_Earned])
 ```
 
 **Age Group Column**:
-```DAX
+``` DAX
 AgeGroup = SWITCH(
     TRUE(),
     'cust_detail'[Customer_Age] < 30, "20-30",
@@ -106,12 +106,12 @@ AgeGroup = SWITCH(
   - Texas, New York, and California together account for **68%** of revenue.
 
 ## Power BI
-- Tableau dashboard built with live SQL connection.
+-  Power BI dashboard built with live SQL connection.
 - Offers filters on card type, customer segment, and geography.
 - Published dashboard enables stakeholder-driven self-service exploration.
 
 ##  Tools Used
--  PostgreSQL 
+-  SQL 
 -  Power BI 
 -  DAX
 -  CSV
