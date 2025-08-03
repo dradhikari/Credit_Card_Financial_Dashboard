@@ -60,7 +60,7 @@ CREATE TABLE cc_detail (
 ```
 
 ##  Data Pipeline & Integration
-- Data is stored in **SQL Server**.
+- Data is stored in **PostgreSQL Server**.
 - Imported via `.CSV` files.
 - Joined on `Client_Num` to link customer and transaction details.
 - Connected to **Power BI**  for analysis and visualization.
