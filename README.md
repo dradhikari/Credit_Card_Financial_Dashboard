@@ -12,10 +12,10 @@ To build a comprehensive dashboard that:
 ##  Dataset Overview
 The project consists of two main datasets stored in SQL tables:
 
-### 1️⃣ Customer Detail Table: `cust_detail`
+### 1️⃣ Customer Detail Table: `customer_detail`
 Contains customer demographics and profile information.
 ```sql
-CREATE TABLE cust_detail (
+CREATE TABLE customer_detail (
     Client_Num INT,
     Customer_Age INT,
     Gender VARCHAR(5),
@@ -34,10 +34,10 @@ CREATE TABLE cust_detail (
 );
 ```
 
-### 2️⃣ Credit Card Detail Table: `cc_detail`
+### 2️⃣ Credit Card Detail Table: `credit_detail`
 Contains financial and behavioral transaction data.
 ```sql
-CREATE TABLE cc_detail (
+CREATE TABLE credit_detail (
     Client_Num INT,
     Card_Category VARCHAR(20),
     Annual_Fees INT,
