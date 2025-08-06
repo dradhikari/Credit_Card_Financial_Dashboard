@@ -60,9 +60,9 @@ CREATE TABLE cc_detail (
 ```
 
 ##  Data Pipeline & Integration
-- Data is stored in **PostgreSQL Server**.
-- Imported via `.CSV` files.
-- Joined on `Client_Num` to link customer and transaction details.
+- Prepare csv files.
+- Create tables in SQL.
+- Imported csv files into SQL.
 - Connected to **Power BI**  for analysis and visualization.
 
 
@@ -106,7 +106,7 @@ AgeGroup = SWITCH(
   - Texas, New York, and California together account for **68%** of revenue.
 
 ## Power BI
--  Power BI dashboard built with live SQL connection.
+- Power BI dashboard built with live SQL connection.
 - Offers filters on card type, customer segment, and geography.
 - Published dashboard enables stakeholder-driven self-service exploration.
 
