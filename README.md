@@ -1,7 +1,7 @@
 
 #  Credit Card Financial Dashboard
 
-This project develops an interactive credit card dashboard using SQL and Power BI (or Tableau), enabling stakeholders to explore real-time customer and transaction insights for better decision-making.
+This project develops an interactive credit card dashboard using SQL and Power BI, enabling stakeholders to explore real-time customer and transaction insights for better decision-making.
 
 ##  Objective
 To build a comprehensive dashboard that:
@@ -118,7 +118,7 @@ AgeGroup = SWITCH(
 
 
 ##  Contact
-Created by **[Dilip Adhiari]**   
+Created by **[Dilip Adhikari]**   
 [LinkedIn](https://www.linkedin.com/in/dilip-adhikari/)  
 
 
