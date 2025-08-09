@@ -60,9 +60,9 @@ CREATE TABLE credit_detail (
 ```
 
 ##  Data Pipeline & Integration
-- Prepare csv files.
+- Prepare CSV files.
 - Create tables in SQL.
-- Imported csv files into SQL.
+- Imported CSV files into SQL.
 - Connected to **Power BI**  for analysis and visualization.
 
 
@@ -70,20 +70,34 @@ CREATE TABLE credit_detail (
 **Total Revenue**:
 ``` DAX
 Total Revenue = 
-SUM('cc_detail'[Total_Trans_Amt]) + 
-SUM('cc_detail'[Annual_Fees]) + 
-SUM('cc_detail'[Interest_Earned])
+SUM('credit_detail'[Total_Trans_Amt]) + 
+SUM(' credit_detail'[Annual_Fees]) + 
+SUM('credit_detail'[Interest_Earned])
 ```
 
 **Age Group Column**:
 ``` DAX
 AgeGroup = SWITCH(
     TRUE(),
-    'cust_detail'[Customer_Age] < 30, "20-30",
-    'cust_detail'[Customer_Age] < 40, "30-40",
-    'cust_detail'[Customer_Age] < 50, "40-50",
-    'cust_detail'[Customer_Age] >= 60, "60+"
+    'customer_detail'[Customer_Age] < 30, "20-30",
+    'customer_detail'[Customer_Age] < 40, "30-40",
+    'customer_detail'[Customer_Age] < 50, "40-50",
+    'customer_detail'[Customer_Age] >= 60, "60+"
 )
+```
+
+```
+current_week_revenue = CALCULATE(
+    SUM('credit_detail'[revenue]),
+    FILTER(
+        ALL('credit_detail'),
+        'credit_detail'[week_num2] = MAX('public credit_detail'[week_num2])))
+
+```
+
+```
+weekly_revenue = DIVIDE(([current_week_revenue]-[previous_week_revenue]), [previous_week_revenue])
+
 ```
 
 ##Power BI Dashboard Features
@@ -91,23 +105,27 @@ AgeGroup = SWITCH(
 ### KPIs
 | Metric                        | Value        |
 |------------------------------|--------------|
-| **Total Revenue**            | `$57M`       |
+| **Total Revenue**            | `$55M`       |
 | **Transaction Volume**       | `$45M`       |
-| **Interest Earned**          | `$8M`        |
-| **Activation Rate**          | `55%`        |
-| **Delinquency Rate**         | `5%`         |
+| **Interest Earned**          | `$7.8M`      |
+| **Activation Rate**          | `57%`        |
+| **Delinquency Rate**         | `6%`         |
 
 ## Key Insights
+- **Weekly Change `52nd Week`**
+ - Revenue decreased by `12.8%`. That is `51st week $1070439` and `52nd week $933134`
+ - Transaction decreased from `51st week $865275` to `52nd week $748677`
+ - Income decreased from `51st week $11075808` to `52nd week $9883404`
+ - Customer decreased from `51st week 12587` to `52nd week 11203`
 - **Gender**:  
-  - Males contribute `$31M` revenue, Females `$26M`.
+  - Males contribute `$31M` revenue, Females `$25M`.
 - **Card Type**:  
-  - Blue and Silver cards generate over **90%** of total transactions.
+  - Blue and Silver cards generate over **94%** of total transactions.
 - **Geography**:  
-  - Texas, New York, and California together account for **68%** of revenue.
+  - Texas, New York, and California together account for `$38M` **69%** of revenue.
 
 ## Power BI
 - Power BI dashboard built with live SQL connection.
-- Offers filters on card type, customer segment, and geography.
 - Published dashboard enables stakeholder-driven self-service exploration.
 
 ##  Tools Used
