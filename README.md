@@ -118,7 +118,7 @@ weekly_revenue = DIVIDE(([current_week_revenue]-[previous_week_revenue]), [previ
   - Income decreased from `51st week $11075808` to `52nd week $9883404`
   - Customer decreased from `51st week 12587` to `52nd week 11203`
 - **Gender**:  
-  - Males contribute `$31M` revenue, Females `$25M`.
+  - Males contribute `$30M` revenue, Females `$25M`.
 - **Card Type**:  
   - Blue and Silver cards generate over **94%** of total transactions.
 - **Geography**:  
