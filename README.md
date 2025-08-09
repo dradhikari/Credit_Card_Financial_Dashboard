@@ -113,10 +113,10 @@ weekly_revenue = DIVIDE(([current_week_revenue]-[previous_week_revenue]), [previ
 
 ## Key Insights
 - **Weekly Change `52nd Week`**
- - Revenue decreased by `12.8%`. That is `51st week $1070439` and `52nd week $933134`
- - Transaction decreased from `51st week $865275` to `52nd week $748677`
- - Income decreased from `51st week $11075808` to `52nd week $9883404`
- - Customer decreased from `51st week 12587` to `52nd week 11203`
+  - Revenue decreased by `12.8%`. That is `51st week $1070439` and `52nd week $933134`
+  - Transaction decreased from `51st week $865275` to `52nd week $748677`
+  - Income decreased from `51st week $11075808` to `52nd week $9883404`
+  - Customer decreased from `51st week 12587` to `52nd week 11203`
 - **Gender**:  
   - Males contribute `$31M` revenue, Females `$25M`.
 - **Card Type**:  
